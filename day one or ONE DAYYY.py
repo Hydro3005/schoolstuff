@@ -19,7 +19,6 @@ def factorial_recursive(n: int) -> int:
     """Return n! computed recursively.
     Precondition: n >= 0
     """
-    # ts like 102
     # base case
     if n == 0 or n == 1:
         return 1

@@ -14,7 +14,11 @@ def reverse_list_iterative(lst: list[int]) -> list[int]:
     >>> reverse_list_iterative([1, 2, 3])
     [3, 2, 1]
     """
-    ...
+    empty_lst = []
+    for i in range(len(lst) - 1, -1,-1):
+        empty_lst.append(lst[i])
+    return empty_lst
+
 
 def reverse_list_recursive(lst: list[int]) -> list[int]:
     """Return a new list that is lst reversed, computed recursively.
@@ -22,7 +26,11 @@ def reverse_list_recursive(lst: list[int]) -> list[int]:
     >>> reverse_list_recursive([1, 2, 3, 4])
     [4, 3, 2, 1]
     """
-    ...
+    #Base case is if the length of the list is one return it
+    if len(lst) <= 1:
+        return lst
+    return reverse_list_recursive(lst[1:]) + [lst[0]]
+
 
 
 def count_frequencies(lst: list[str]) -> dict[str, int]:
